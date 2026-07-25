@@ -3,7 +3,14 @@
 ## fecha: 25/07/2026. 
 ## Autor: Juan Sebastian Mina Quintero.
 
-Se eliminó las carpeta de docs debido a la Nula conección con oracle SQL developer datamodeler. Esta se agregará cuando se tenga hecha el ERD.
+Se eliminó las carpeta de docs debido a la Nula conección con oracle SQL developer datamodeler. Esta se agregó después cuando se tuvo hecho el ERD de la base de datos. Se agregó también una carpeta interna llamada "Diagramas" para guardar el modelo lógico y relacional. Además, se añadió un readme dentro de la misma carpeta dando detalles de algunas decisiones tomadas en el diseño de la DB.
+
+## Added
+- /docs
+- /DIAGRAMAS
+- logical.png
+- Relational_1.png
+- README.md
 
 ### Removed
 - /docs
