@@ -1,1 +1,2 @@
-# LOGISTICA_Y_CADENA_DE_SUMINISTRO
+# LOGISTICA Y CADENA DE SUMINISTRO
+El sector elegido fue Logistica y cadena de suministro.
