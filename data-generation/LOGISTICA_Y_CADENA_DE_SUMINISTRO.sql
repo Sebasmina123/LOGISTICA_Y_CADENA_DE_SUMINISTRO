@@ -52,7 +52,7 @@ CREATE TABLE CLI_REMITENTES
      ciudad_principal  VARCHAR2 (30 CHAR) , 
      sla_entrega_horas NUMBER (2)  NOT NULL , 
      penalidad_porc    VARCHAR2 (10 CHAR)  NOT NULL , 
-     activo            NUMBER 
+     activo            VARCHAR2 (8 CHAR)
     ) 
 ;
 
@@ -67,7 +67,7 @@ CREATE TABLE DIR_NOVEDADES
      tip_novedad        VARCHAR2 (30 CHAR) , 
      desc_novedad       VARCHAR2 (2000 CHAR) , 
      id_agente_registro NUMBER (10)  NOT NULL , 
-     requiere_accion    NUMBER 
+     requiere_accion    VARCHAR2 (8 CHAR)
     ) 
 ;
 
@@ -98,7 +98,7 @@ CREATE TABLE GPS_RUTAS
      fec_ruta            DATE , 
      hra_inicio          DATE , 
      hra_fin             DATE , 
-     " km_recorridos"    NUMBER (6,2) , 
+     km_recorridos   NUMBER (6,2) , 
      num_paradas_plan    NUMBER (2) , 
      num_paradas_real    NUMBER (2) , 
      desviacion_ruta_km  NUMBER (6,2) , 
@@ -120,7 +120,7 @@ CREATE TABLE OPE_CONDUCTORES
      id_ciudad_base        VARCHAR2 (20 CHAR)  NOT NULL , 
      tip_vehiculo          VARCHAR2 (20 CHAR)  NOT NULL , 
      cod_zona_asignada     NUMBER (10) , 
-     activo                NUMBER , 
+     activo                VARCHAR2 (8 CHAR) , 
      calific_promedio_acum NUMBER (4,2)  NOT NULL 
     ) 
 ;
