@@ -10,6 +10,6 @@ Se realizaron los diagramas en el software Oracle SQL Developer Data Modeler. A 
 - tip_vehiculo: moto, bicicleta de carga, Van, Camión.
 - Canal_calificacion: correo electronico, llamada, SMS, App
 - tip_novedad: Depende de la situación: dirección erronea, información incompleta, dificil acceso, Ausente, rechazado, retenido, pérdida, fuerza mayor.
-- requiere_accion: "1" indica sí; "0" indica No.
+- requiere_accion: Valores "Sí" y "No".
 - Los id en general: Todos los id tienen una precisión de 10 para tener una gran combinación máxima de valores y tener menos limitación a la hora de ña inserción.
  
