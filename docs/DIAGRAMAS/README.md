@@ -4,7 +4,7 @@ Se realizaron los diagramas en el software Oracle SQL Developer Data Modeler. A 
 
 - tip_paquete: sobres, bolsas plasticas, cajas de carton, contenedores de manera.
 - tipo_cliente: Natural, E-commerce, corporativos.
-- activo: "1" indica Sí; "0" indica No.
+- activo: tiene dos valores "activo" e "inactivo".
 - tip_doc: cédula de ciudadanía, cédula de extranjería.
 - num_doc_hash: código hash aleatorio con formato MD5(Message Digest 5).
 - tip_vehiculo: moto, bicicleta de carga, Van, Camión.
