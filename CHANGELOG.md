@@ -1,4 +1,14 @@
 # changelog
+## fecha: 26/07/2026.
+## Autor: Juan Sebastian Mina Quintero.
+
+Se hizo actualizaciones en el DDL de la base de datos, al igual que se mejoró los scripts de generación de datos dummy, aunque sin terminar.
+
+## changed:
+- inserciones.py
+- data_generation.py
+- LOGISTICA_Y_CADENA_DE_SUMINISTRO.sql
+
 
 ## fecha: 25/07/2026. 
 ## Autor: Juan Sebastian Mina Quintero.
