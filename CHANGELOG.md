@@ -2,8 +2,7 @@
 
 ## fecha. 26/07/2026.
 ## Autor: Juan Sebastian Mina Quintero.
-
-Se hizo una gran actualización, eliminación y agregación en los archivos de data-generation. Y se actualizó el diagrama relational_1.
+Se hizo una gran actualización, eliminación y agregación en los archivos de data-generation; se actualizó el diagrama relational_1.; se creó una carpeta para guardar las capturas de pantalla de la fase uno.
 
 ## Added:
 - carpeta /data-generation/exports
@@ -11,6 +10,7 @@ Se hizo una gran actualización, eliminación y agregación en los archivos de d
 - config.json
 - exportar(): función para exportación en data_generation.py
 - algoritmos para 3 anomalías controladas
+- carpeta /docs/evidencias/fase1 creada.
 
 
 ## Changed:
