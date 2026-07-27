@@ -1,0 +1,14 @@
+{
+    "seed": 2026,
+
+    "fecha_inicio": "2016-01-01",
+    "fecha_fin": "2017-01-01",
+
+    "conductores": 500,
+    "remitentes": 200,
+    "zonas": 300,
+    "envios": 2000000,
+    "gps_rutas": 100000,
+    "calificaciones": 300000,
+    "novedades": 150000
+}
