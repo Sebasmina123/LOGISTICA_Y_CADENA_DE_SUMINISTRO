@@ -1,4 +1,33 @@
 # changelog
+
+## fecha. 26/07/2026.
+## Autor: Juan Sebastian Mina Quintero.
+
+Se hizo una gran actualización, eliminación y agregación en los archivos de data-generation. Y se actualizó el diagrama relational_1.
+
+## Added:
+- carpeta /data-generation/exports
+- archivos ejemplares de  las exportaciones JSON y CSV en exports
+- config.json
+- exportar(): función para exportación en data_generation.py
+- algoritmos para 3 anomalías controladas
+
+
+## Changed:
+- fecha_aleatoria(): ahora está parametrizada con las configuraciones
+- hora_aleatoria(): genera horas randoms desde las 8am hasta las 9pm, estableciendo condiciones para las horas picos y con descanso entre 12-2pm.
+- comentario_realista(): genera comentarios con un 5% de nulos.
+- requeriments.txt fue actualizada.
+  
+## Removed
+- archivo inserciones.py fue eliminado porque ya no era relevante.
+
+## Fixed:
+- nombre_zona(): se corrigió la condición de comparación para retornar el nombre de la zona.
+- Algunas variables fueron cambiadas por las funciones actualizadas.
+- estructura de código re organizando las funciones al principio.
+- Se actualizó el diagrama relational_1 en la carpeta de doc/DIAGRAMAS
+
 ## fecha: 26/07/2026.
 ## Autor: Juan Sebastian Mina Quintero.
 
