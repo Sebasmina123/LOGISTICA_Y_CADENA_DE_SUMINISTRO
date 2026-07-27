@@ -48,7 +48,7 @@ CREATE TABLE CLI_REMITENTES
     ( 
      id_remitente      NUMBER (10)  NOT NULL , 
      razon_social      VARCHAR2 (250 CHAR)  NOT NULL , 
-     tipo_cliente      VARCHAR2 (15 CHAR) , 
+     tipo_cliente      VARCHAR2 (30 CHAR) , 
      ciudad_principal  VARCHAR2 (30 CHAR) , 
      sla_entrega_horas NUMBER (2)  NOT NULL , 
      penalidad_porc    VARCHAR2 (10 CHAR)  NOT NULL , 
@@ -78,12 +78,12 @@ CREATE TABLE GEO_ZONAS
     ( 
      id_zona             NUMBER (10)  NOT NULL , 
      nom_zona            VARCHAR2 (27 CHAR)  NOT NULL , 
-     id_ciudad           NUMBER (10)  NOT NULL , 
+     id_ciudad           VARCHAR2 (10 CHAR)  NOT NULL , 
      barrio_referencia   VARCHAR2 (30 CHAR) , 
      latitud_centroide   NUMBER (10,8) , 
      longitud_centroide  NUMBER (11,8) , 
      nivel_trafico_prom  NUMBER (4,2) , 
-     tip_zona            VARCHAR2 (4 CHAR) , 
+     tip_zona            VARCHAR2 (8 CHAR) , 
      distancia_bodega_km NUMBER (6,2) 
     ) 
 ;
@@ -99,8 +99,8 @@ CREATE TABLE GPS_RUTAS
      hra_inicio          DATE , 
      hra_fin             DATE , 
      km_recorridos   NUMBER (6,2) , 
-     num_paradas_plan    NUMBER (2) , 
-     num_paradas_real    NUMBER (2) , 
+     num_paradas_plan    NUMBER (3) , 
+     num_paradas_real    NUMBER (3) , 
      desviacion_ruta_km  NUMBER (6,2) , 
      consumo_combustible VARCHAR2 (10 CHAR) 
     ) 
@@ -209,7 +209,13 @@ ALTER TABLE TMS_ENVIOS
      id_remitente
     ) 
 ;
+SELECT  t.id_envio, r.razon_social, t.tip_paquete, t.vr_declarado, c.nomb_cond ||' '|| c.apell_cond  AS "Conductor" FROM TMS_ENVIOS  t 
+    LEFT JOIN OPE_CONDUCTORES c ON(t.cond_id = c.cond_id)
+    LEFT JOIN CLI_REMITENTES r ON(t.id_remitente = r.id_remitente);
 
+SELECT
+TO_CHAR(hra_recepcion,'HH24:MI:SS')
+FROM TMS_ENVIOS;
 SELECT * FROM GPS_RUTAS;
 SELECT * FROM CAL_DESTINATARIOS;
 SELECT * FROM CLI_REMITENTES;
