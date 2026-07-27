@@ -1,0 +1,29 @@
+[
+    {
+        "id_remitente":7400709593,
+        "razon_social":"Páez-Vásquez",
+        "tipo_cliente":"E-commerce",
+        "ciudad_principal":"CTG",
+        "sla_entrega_horas":38,
+        "penalidad_porc":5201.0,
+        "activo":"activo"
+    },
+    {
+        "id_remitente":6774981744,
+        "razon_social":"Castaño, Rincón and Perdomo",
+        "tipo_cliente":"E-commerce",
+        "ciudad_principal":"CTG",
+        "sla_entrega_horas":48,
+        "penalidad_porc":2515.87,
+        "activo":"inactivo"
+    },
+    {
+        "id_remitente":4684452978,
+        "razon_social":"Moreno-Ávila",
+        "tipo_cliente":"Natural",
+        "ciudad_principal":"MZL",
+        "sla_entrega_horas":64,
+        "penalidad_porc":56654.88,
+        "activo":"inactivo"
+    }
+]
