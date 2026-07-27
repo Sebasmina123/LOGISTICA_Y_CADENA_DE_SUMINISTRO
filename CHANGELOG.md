@@ -7,7 +7,7 @@ Se hizo una gran actualización, eliminación y agregación en los archivos de d
 
 ## Added:
 - carpeta /data-generation/exports
-- archivos ejemplares de  las exportaciones JSON y CSV en exports
+- archivos ejemplares de  las exportaciones parquet y CSV en exports
 - config.json
 - exportar(): función para exportación en data_generation.py
 - algoritmos para 3 anomalías controladas
