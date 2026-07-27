@@ -58,8 +58,8 @@ def exportar(nombre, columnas, data):
     print(df.head())
 
     df.to_csv( f"exports/{nombre}.csv",index=False, encoding="utf-8-sig")
-
-    df.to_json( f"exports/{nombre}.json", orient="records", indent=4, force_ascii=False)
+    # Parquet
+    df.to_parquet(f"exports/{nombre}.parquet", index=False, engine="pyarrow", compression="snappy")
     print(f"{nombre} listo")
 
 
@@ -67,7 +67,6 @@ def exportar(nombre, columnas, data):
 def penalizacion_porc():
     valor_producto = random.randint(10000, 1000000)
     porc = round(random.uniform(0.02, 0.08), 2)  # Genera un porcentaje aleatorio entre 2% y 8%
-    print(porc)
     penalizacion = valor_producto * porc  # del 2% al 8% de la valor del producto
     return valor_producto, round(penalizacion, 2)
 
@@ -218,7 +217,7 @@ activo = ["activo","inactivo"]
 data_OPE_CONDUCTORES = []
 
 ids_c = []
-for i in range(3):
+for i in range(config["conductores"]):
     # Generar un ID único por cada conductor
     rn_ope_conduc = random.sample(range(0000000000, 9999999999), 1)[0]
     ids_c.append(rn_ope_conduc)
@@ -238,7 +237,7 @@ tip_cliente = ["Natural","E-commerce","Corporativo"] #tipo de cliente
 vr_producto = []
 
 
-for i in range(3):
+for i in range(config["remitentes"]):
     # Generar un ID único por cada remitente
     rn_remitente = random.sample(range(0000000000, 9999999999), 1)[0]
     ids_r.append(rn_remitente)
@@ -343,6 +342,10 @@ print(f"{cantidad_pesos} registros con pesos incoherentes.")
 data_GPS_rutas = []
 
 for i in range(config["gps_rutas"]):
+    envio = random.choice(data_TMS_envios)
+    fec_ruta = envio[8]   # fecha programada
+    cond_id = envio[2]
+
     hora_inicio = hora_aleatoria()
     hora_fin = hora_aleatoria()
     km_recorridos = round(random.uniform(1, 1000), 2)
@@ -358,20 +361,21 @@ for i in range(config["gps_rutas"]):
     else:
         consumo_combustible = "Alto"
     
-    data_GPS_rutas.append((rn_gps_rutas, random.choice(ids_c),resultado_fechas[2],hora_inicio, hora_fin, km_recorridos, num_paradas_plan, num_paradas_real, desviacion_ruta_km,consumo_combustible))
+    data_GPS_rutas.append((rn_gps_rutas, cond_id, fec_ruta,hora_inicio, hora_fin, km_recorridos, num_paradas_plan, num_paradas_real, desviacion_ruta_km,consumo_combustible))
 
 
 
 
 #--------------- CAL_DESTINATARIOS ---------------#
 data_CAL_destinatarios = []
-
+envios_entregados = [e for e in data_TMS_envios if e[15] is not None]
 for i in range(config["calificaciones"]):
     rn_cal_destinatarios = random.sample(range(0000000000, 9999999999), 1)[0]
+    envio = random.choice(envios_entregados)
     puntaje_1_5 = random.randint(1,5)
     comentario = comentario_realista()
     canal_calificacion = ["Correo Electronico", "Llamada", "SMS", "App"]
-    data_CAL_destinatarios.append((rn_cal_destinatarios, random.choice(ids_e),resultado_fechas[9], puntaje_1_5, comentario, random.choice(canal_calificacion)))
+    data_CAL_destinatarios.append((rn_cal_destinatarios, envio[0], envio[15], puntaje_1_5, comentario, random.choice(canal_calificacion)))
 
 
 #----------------- DIR_NOVEDADES ---------------#
@@ -379,12 +383,13 @@ data_DIR_novedades = []
 
 for i in range(config["novedades"]):
     rn_dir_novedades = random.sample(range(0000000000, 9999999999), 1)[0]
+    envio = random.choice(data_TMS_envios)
     tip_novedad = ["Dirección Erronea", "Información Incompleta", "Dificil Acceso", "Ausente", "Rechazado", "Retenido", "Pérdida"]
     desc_novedad = fake.text(max_nb_chars=50)
     id_agente_registro = random.sample(range(0000000000, 9999999999),1)[0]
     requiere_accion = ["Si", "No"]
 
-    data_DIR_novedades.append((rn_dir_novedades, random.choice(ids_e), resultado_fechas[9], random.choice(tip_novedad), desc_novedad,id_agente_registro, random.choice(requiere_accion)))
+    data_DIR_novedades.append((rn_dir_novedades, envio[0], envio[9], random.choice(tip_novedad), desc_novedad,id_agente_registro, random.choice(requiere_accion)))
 
 
 # ----------------- EXPORTACIÓN ---------------------#
@@ -405,4 +410,4 @@ exportar("DIR_NOVEDADES",[ "id_novedad", "id_envio", "fec_novedad", "tip_novedad
 
 exportar("CAL_DESTINATARIOS",["id_calificacion","id_envio","fec_calificacion","puntaje_1_5","comentario_texto","canal_calificacion"], data_CAL_destinatarios)
 
-print("\nArchivos CSV y JSON exportados correctamente.")
+print("\nArchivos CSV y parquet exportados correctamente.")
