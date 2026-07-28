@@ -1,9 +1,11 @@
 # changelog
 ## fecha: 28/07/2026.
 ## Autor: Juan Sebastian Mina Quintero.
-Se creó la carpeta de /infra para almacenar todos los archivos de el código de Iac para  Microsoft fabric.
+Se creó la carpeta de /infra para almacenar todos los archivos de el código de Iac para  Microsoft fabric. Y también se creó la carpeta /pipelines para guardar los notebooks con programación de las capas del pipeline.
 
 ## Added:
+- carpeta /pipelines
+- archivo 00_ingesta_datos.ipynb
 - carpeta /infra
 - README.md
 - backend.tf
