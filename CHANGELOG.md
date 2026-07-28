@@ -1,6 +1,25 @@
 # changelog
+## fecha: 28/07/2026.
+## Autor: Juan Sebastian Mina Quintero.
+Se creó la carpeta de /infra para almacenar todos los archivos de el código de Iac para  Microsoft fabric.
 
-## fecha. 26/07/2026.
+## Added:
+- carpeta /infra
+- README.md
+- backend.tf
+- dev.tfvars
+- dev.tfvars
+- main.tf
+- notebooks.tf
+- outputs.tf
+- pipeline.tf
+- prod.tfvars
+- providers.tf
+- terraform.tfvars
+- variables.tf
+- versions.tf
+
+## fecha: 27/07/2026.
 ## Autor: Juan Sebastian Mina Quintero.
 Se hizo una gran actualización, eliminación y agregación en los archivos de data-generation; se actualizó el diagrama relational_1.; se creó una carpeta para guardar las capturas de pantalla de la fase uno.
 
