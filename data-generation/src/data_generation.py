@@ -296,10 +296,9 @@ for i in range(config["envios"]):
 cantidad_duplicados = max(1, int(len(data_TMS_envios) * 0.01))
 duplicados = random.sample(data_TMS_envios, cantidad_duplicados) 
 
-#hacemos un for para insertar una nueva tupla, pero con ids diferentes
+#hacemos un for para insertar una nueva tupla
 for envio in duplicados:
     nuevo = list(envio)
-    nuevo[0] = random.sample(range(1000000000,9999999999), 1)[0]
     data_TMS_envios.append(tuple(nuevo))
 
 print(f"{cantidad_duplicados} envíos duplicados agregados.")
