@@ -1,5 +1,7 @@
 # LOGISTICA Y CADENA DE SUMINISTRO
 ### El sector elegido fue Logistica y cadena de suministro.
+### Se escogió Logística y cadena de suministro porque es un sector activo, en donde hay gran variedad de datos y posibilidades, cosa que ayuda a hacer cálculos de rendimiento y tener más variabilidad en resultados.
+
 ### Y la plataforma cloud seleccionada fue Microsoft Fabric.
 
 ### Se escogió microsoft Fabric como plataforma cloud porque tiene casi todo integrado en un mismo lugar, reduciendo la necesidad de tener múltiples servicios independientes.
