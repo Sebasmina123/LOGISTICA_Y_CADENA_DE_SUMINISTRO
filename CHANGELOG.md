@@ -1,4 +1,14 @@
 # changelog
+
+## fecha: 28/07/2026.
+## Autor: Juan Sebastian Mina Quintero.
+
+Se actualizó el archivo de 03_gold en la carpeta de pipelines
+
+## Changed
+- 03_gold.ipynb
+
+
 ## fecha: 28/07/2026.
 ## Autor: Juan Sebastian Mina Quintero.
 Se creó la carpeta de /infra para almacenar todos los archivos de el código de Iac para  Microsoft fabric. Y también se creó la carpeta /pipelines para guardar los notebooks con programación de las capas del pipeline.
