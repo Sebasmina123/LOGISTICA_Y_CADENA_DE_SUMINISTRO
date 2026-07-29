@@ -3,7 +3,11 @@
 ## fecha: 28/07/2026.
 ## Autor: Juan Sebastian Mina Quintero.
 
-Se actualizó el archivo de 03_gold en la carpeta de pipelines
+Se actualizó el archivo de 03_gold en la carpeta de pipelines y se añadieron evidencias de la fase 3.
+
+## Added:
+- docs/evidencias/fase 3
+- capturas de pantallas con pruebas de la fase 3
 
 ## Changed
 - 03_gold.ipynb
