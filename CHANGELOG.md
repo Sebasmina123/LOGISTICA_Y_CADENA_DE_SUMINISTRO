@@ -6,6 +6,9 @@ Se creó la carpeta de /infra para almacenar todos los archivos de el código de
 ## Added:
 - carpeta /pipelines
 - archivo 00_ingesta_datos.ipynb
+- archivo 01_bronze.ipynb
+- archivo 02_silver.ipynb
+- archivo 03_gold.ipynb
 - carpeta /infra
 - README.md
 - backend.tf
