@@ -1,1 +1,1 @@
-### Hago este dashboard como agregado para compensar un poco las cosas que no pude terminar en la realización de este proyecto. Muchas gracias.
+### Hago este dashboard como agregado para compensar un poco las cosas que no pude terminar en la realización de este proyecto. Agrego imagenes por si no abre. Muchas gracias.
