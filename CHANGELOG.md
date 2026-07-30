@@ -7,7 +7,11 @@ se añaden las versiones más recientes de los notebooks del pipeline y se añad
 
 También se creó la carpeta /orchetration/ con imagen del pipeline final, un readme y una carpeta .ZIP de la exportación del pipeline desde fabric.
 
+Por último, hizo un dashboard en compensación a las cosas que no se pudieron realizar en este proyecto
+
 ## Added:
+- /dashboard/logitrack_bi.pbix
+- /dashboard
 - catalogo_datos.md
 - catalogo_datos.ipynb
 - docs/CATALOGO DE DATOS/readme.md
