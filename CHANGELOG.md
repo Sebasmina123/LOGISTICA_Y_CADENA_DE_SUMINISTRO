@@ -3,9 +3,23 @@
 ## fecha: 28/07/2026.
 ## Autor: Juan Sebastian Mina Quintero.
 
-se añaden las versiones más recientes de los notebooks del pipeliney se añadieron evidencias de la fase 3.
+se añaden las versiones más recientes de los notebooks del pipeline y se añadieron evidencias de la fase 3, 4 y 5. Se creó también el apartado de catalogo de datos docs/CATALOGO DE DATOS/ con sus archivos correspondientes catalogo_datos.md y catalogo_datos.ipynb junto a un readme.
+
+También se creó la carpeta /orchetration/ con imagen del pipeline final, un readme y una carpeta .ZIP de la exportación del pipeline desde fabric.
 
 ## Added:
+- catalogo_datos.md
+- catalogo_datos.ipynb
+- docs/CATALOGO DE DATOS/readme.md
+- docs/CATALOGO DE DATOS/
+- /orchetration/readme.md
+- /orchetration/PL_LOGITRACK(1).zip
+- /orchetration/pipeline_final.png
+- /orchetration
+- capturas de pantallas con pruebas de la fase 5
+- capturas de pantallas con pruebas de la fase 4
+- docs/evidencias/fase 5
+- docs/evidencias/fase 4
 - docs/evidencias/fase 3
 - capturas de pantallas con pruebas de la fase 3
 
